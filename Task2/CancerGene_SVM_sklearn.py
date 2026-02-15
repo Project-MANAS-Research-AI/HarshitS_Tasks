@@ -1,6 +1,3 @@
-# ==========================================
-# Genomic Cancer Dataset - Linear SVM
-# ==========================================
 
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
@@ -23,7 +20,6 @@ scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-# Linear works well in high dimensions
 model = SVC(kernel='linear', C=0.1)
 model.fit(X_train, y_train)
 
